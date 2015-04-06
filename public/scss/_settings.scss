@@ -116,6 +116,7 @@ $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
+$wafer: #b06906;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -127,7 +128,7 @@ $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to control various global styles
 // $body-bg: $white;
-// $body-font-color: $jet;
+$body-font-color: $wafer;
 $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -201,7 +202,7 @@ $body-font-family: $font-family-sans-serif;
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: $jet;
+$header-font-color: $wafer;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -237,7 +238,7 @@ $body-font-family: $font-family-sans-serif;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: 1.2rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -452,7 +453,7 @@ $button-margin-bottom: rem-calc(20);
 // We use these to control button border styles.
 // $button-border-width: 0;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: $wafer;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -622,7 +623,7 @@ $button-margin-bottom: rem-calc(20);
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-// $form-spacing: rem-calc(16);
+$form-spacing: 1.2rem;
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
@@ -634,7 +635,7 @@ $button-margin-bottom: rem-calc(20);
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
+$input-font-size: 1.2rem;
 // $input-bg-color: $white;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);
