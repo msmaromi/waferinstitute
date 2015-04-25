@@ -5,19 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= title %></title>
   <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
   <script src="bower_components/modernizr/modernizr.js"></script>
+  <style>
+  .top-bar-section ul {display: table; margin: 0 auto;}
+  .top-bar-section ul li {display: table-cell;}
+  .top-bar-section .menu {
+    width: 150px;
+    text-align: center;
+  }
+  #menu-logo-only .top-bar-section ul li {
+    background: transparent;
+  }
+  #menu-logo-only .top-bar-section li a {
+    background: transparent;
+  }
+  #menu-complete {
+    display: none;
+  }
+  </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <div id="menu-logo-only" class="fixed">
+    <nav>
+      <section class="top-bar-section">
+        <ul>
+          <li>
+            <a href="#"><img src="images/logo.png" width="33px"></a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+
+  <div id="menu-complete" class="fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <section class="top-bar-section">
+        <ul>
+          <li class="menu"><a href="#">Nav Button 1</a></li>
+          <li class="divider"></li>
+          <li>
+            <a href="#"><img src="images/logo.png" width="33px"></a>
+            <!-- <li class="menu"><a href="#">Wafer Institute</a></li> -->
+          </li>
+          <li class="divider"></li>
+          <li class="menu"><a href="#">Nav Button 2</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+  <!-- Navigation -->
+
+  <!-- Slider -->
+  <section>
+    <div class="slider">
+      <div>konten 1</div>
+      <div>konten 2</div>
+    </div>
+  </section>
+  <!-- Slider -->
+
   <div class="row">
     <div class="large-12 columns">
-      <h1>Welcome to Foundation</h1>
+      <p><a name="section1"></a></p>
+      <h1 data-magellan-destination="section1">Welcome to Foundation</h1>
     </div>
   </div>
 
   <div class="row">
     <div class="large-12 columns">
       <div class="panel">
-        <h3>We&rsquo;re stoked you want to try Foundation! </h3>
+        <p><a name="section2"></a></p>
+        <h3 data-magellan-destination="section2">We&rsquo;re stoked you want to try Foundation! </h3>
         <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
         <p>Once you've exhausted the fun in this document, you should check out:</p>
         <div class="row">
@@ -45,7 +105,8 @@
 
   <div class="row">
     <div class="large-8 medium-8 columns">
-      <h5>Here&rsquo;s your basic grid:</h5>
+      <p><a name="section3"></a></p>
+      <h5 data-magellan-destination="section3">Here&rsquo;s your basic grid:</h5>
       <!-- Grid Example -->
 
       <div class="row">
@@ -167,6 +228,27 @@
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
   <script src="javascripts/app.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $("#menu-logo-only ul").mouseenter(function() {
+      // $("#menu-logo-only").hide();
+      $("#menu-complete").fadeIn();
+    });
+
+    $("#menu-complete").mouseleave(function() {
+      $("#menu-complete").fadeOut();
+      $("#menu-logo-only").show();
+    });
+
+    $(".slider").slick({
+      autoplay: true,
+      arrows: false,
+      fade: true
+    });
+  });
+  </script>
 </body>
 </html>
