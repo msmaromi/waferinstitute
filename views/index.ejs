@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= title %></title>
   <link rel="stylesheet" href="stylesheets/app.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
   <script src="bower_components/modernizr/modernizr.js"></script>
   <style>
   .top-bar-section ul {display: table; margin: 0 auto;}
@@ -22,6 +22,9 @@
   }
   #menu-complete {
     display: none;
+  }
+  #slider {
+    margin-top: -45px;
   }
   </style>
 </head>
@@ -58,10 +61,11 @@
   <!-- Navigation -->
 
   <!-- Slider -->
-  <section>
-    <div class="slider">
-      <div>konten 1</div>
-      <div>konten 2</div>
+  <section id="slider">
+    <div>
+      <div><img src="images/pcb.jpg"></div>
+      <div><img src="images/build-robot.jpg"></div>
+      <div><img src="images/robot-2.jpg"></div>
     </div>
   </section>
   <!-- Slider -->
@@ -230,7 +234,7 @@
   <script src="bower_components/foundation/js/foundation.min.js"></script>
   <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
   <script src="javascripts/app.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+  <script type="text/javascript" src="slick/slick/slick.min.js"></script>
   <script>
   $(document).ready(function() {
     $("#menu-logo-only ul").mouseenter(function() {
@@ -243,8 +247,9 @@
       $("#menu-logo-only").show();
     });
 
-    $(".slider").slick({
+    $("#slider div").slick({
       autoplay: true,
+      autoplaySpeed: 3000,
       arrows: false,
       fade: true
     });
