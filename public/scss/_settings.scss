@@ -117,7 +117,7 @@ $font-family-tikal-sans: "Tikal Sans";
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
-$wafer: #b06906;
+$wafer: #808080;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -1383,11 +1383,11 @@ $input-font-size: 1.2rem;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #FFE6B6;
+$topbar-bg-color: transparent;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: rem-calc(45);
+$topbar-height: rem-calc(99);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
